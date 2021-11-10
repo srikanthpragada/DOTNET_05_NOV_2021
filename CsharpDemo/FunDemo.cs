@@ -21,13 +21,15 @@ namespace CsharpDemo
             //Line(ch: '*');  // Named parameter
             //Line(ch: '.', len: 5);
 
-            Greet("Hello", "Bill", "Larry", "Mark");
-            Greet("Hi", "Joe", "Kevin");
+            //Greet("Hello", "Bill", "Larry", "Mark");
+            //Greet("Hi", "Joe", "Kevin");
 
-            int x, y;
+            
 
-            TakeValues(out x, out y);
-            Console.WriteLine($"x = {x}, y = {y}");
+            //int x, y;
+
+            //TakeValues(out x, out y);
+            //Console.WriteLine($"x = {x}, y = {y}");
         }
 
         static void TakeValues(out int a, out int b)
@@ -53,7 +55,7 @@ namespace CsharpDemo
                 Console.Write(ch);
         }
 
-        static void Greet(string message, params string [] names)
+        static void Greet(string message = "Hello", params string [] names)
         {
             foreach(string n in names)
                  Console.WriteLine($"{message} {n}");
