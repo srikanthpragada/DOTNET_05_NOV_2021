@@ -49,6 +49,8 @@
     <Compile Include="Factors.cs" />
     <Compile Include="FunDemo.cs" />
     <Compile Include="HigherPrices.cs" />
+    <Compile Include="Oop\TestAccount.cs" />
+    <Compile Include="Oop\TestPerson.cs" />
     <Compile Include="Oop\TestProduct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
