@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace CsharpDemo.Oop
 {
+    enum AccountType { SAVINGS, CURRENT };
+
     class Account
     {
         private int acno;
         private string ahname;
         private int balance;
+        private AccountType type = AccountType.SAVINGS;
         private static int minbal = 10000;
 
         public Account(int acno, string ahname)
@@ -51,7 +54,7 @@ namespace CsharpDemo.Oop
             }
             set
             {
-                this.acno = value; 
+                this.acno = value;
             }
         }
     }
