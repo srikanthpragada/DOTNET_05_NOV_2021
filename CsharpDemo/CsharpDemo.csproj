@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpDemo.Oop.InhDemo</StartupObject>
+    <StartupObject>CsharpDemo.Library1.ObjectDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,9 @@
     <Compile Include="Factors.cs" />
     <Compile Include="FunDemo.cs" />
     <Compile Include="HigherPrices.cs" />
+    <Compile Include="Library1\ObjectDemo.cs" />
+    <Compile Include="Library1\StringVertical.cs" />
+    <Compile Include="Library1\TotalMarks.cs" />
     <Compile Include="Oop\InhDemo.cs" />
     <Compile Include="Oop\TestAccount.cs" />
     <Compile Include="Oop\TestPerson.cs" />
