@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CsharpDemo.Library1
 {
-    class Person
+    class Person : IComparable<Person>
     {
         public string Name { get; set; }
         public int Age { get; set; }
@@ -19,12 +19,18 @@ namespace CsharpDemo.Library1
         public override bool Equals(object obj)
         {
             var other = obj as Person;
-            return this.Name == other.Name && this.Age == other.Age; 
+            return this.Name == other.Name && this.Age == other.Age;
         }
 
         public override int GetHashCode()
         {
             return this.Age;
+        }
+
+        // 0, > 0, < 0
+        public int CompareTo(Person other)
+        {
+            return this.Age - other.Age;
         }
     }
 
@@ -35,9 +41,20 @@ namespace CsharpDemo.Library1
             var p1 = new Person { Name = "Steve", Age = 30 };
             var p2 = new Person { Name = "Steve", Age = 30 };
 
-            Console.WriteLine(p1.ToString());
-            Console.WriteLine(p1 == p2);
-            Console.WriteLine(p1.Equals(p2));
+            Person[] persons =
+                  { new Person{ Name = "Abc", Age = 20},
+                    new Person{ Name = "Xyz", Age = 40},
+                    new Person{ Name = "Pqr", Age = 16} };
+
+            Array.Sort(persons);
+
+            foreach(var p in persons)
+                Console.WriteLine(p);
+
+
+            //Console.WriteLine(p1.ToString());
+            //Console.WriteLine(p1 == p2);
+            //Console.WriteLine(p1.Equals(p2));
 
         }
     }
