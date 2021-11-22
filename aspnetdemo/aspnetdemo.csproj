@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="hello.aspx" />
+    <Content Include="PriceCalculator.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +82,13 @@
     </Compile>
     <Compile Include="hello.aspx.designer.cs">
       <DependentUpon>hello.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PriceCalculator.aspx.cs">
+      <DependentUpon>PriceCalculator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PriceCalculator.aspx.designer.cs">
+      <DependentUpon>PriceCalculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
