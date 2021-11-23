@@ -42,6 +42,33 @@ namespace aspnetdemo
         protected global::System.Web.UI.WebControls.TextBox txtQty;
 
         /// <summary>
+        /// chkDiscount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkDiscount;
+
+        /// <summary>
+        /// rbLumsum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbLumsum;
+
+        /// <summary>
+        /// rbInstallments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbInstallments;
+
+        /// <summary>
         /// btnCalculate control.
         /// </summary>
         /// <remarks>

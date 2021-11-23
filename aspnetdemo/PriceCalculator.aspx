@@ -17,7 +17,15 @@
         <br />
         <asp:TextBox ID="txtQty" runat="server"></asp:TextBox>
         <p></p>
-        <asp:Button ID="btnCalculate" runat="server" Text="Calculate" />
+        <asp:CheckBox ID="chkDiscount" runat="server" />Discounted Product
+        <p></p>
+        Payment Mode : 
+        <asp:RadioButton ID="rbLumsum" runat="server" 
+            GroupName="pmode"  Checked="true"/>Lumsum
+
+        <asp:RadioButton ID="rbInstallments" runat="server" GroupName="pmode" />Installments
+        <p></p>
+        <asp:Button ID="btnCalculate" runat="server" Text="Calculate" OnClick="btnCalculate_Click" />
         <p></p>
         <asp:Label ID="lblResult" runat="server" Text=""></asp:Label>
     </form>

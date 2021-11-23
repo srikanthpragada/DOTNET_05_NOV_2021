@@ -13,5 +13,22 @@ namespace aspnetdemo
         {
 
         }
+
+        protected void btnCalculate_Click(object sender, EventArgs e)
+        {
+            var price = Double.Parse(txtPrice.Text);
+            var qty = Double.Parse(txtQty.Text);
+
+            var amount = price * qty;
+
+            if (chkDiscount.Checked)
+                amount *= .90;   // 10% discount 
+
+            if (rbInstallments.Checked)
+                amount *= 1.05;
+
+            lblResult.Text = amount.ToString();
+
+        }
     }
 }
