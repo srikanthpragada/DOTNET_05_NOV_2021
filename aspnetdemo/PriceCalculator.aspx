@@ -9,13 +9,19 @@
 <body>
     <form id="form1" runat="server">
         <h2>Price Calculator</h2>
-        Price per Unit
+        Price Per Unit
         <br />
-        <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPrice" Required="true" runat="server"></asp:TextBox>
+       
         <p></p>
         Quantity Purchased
         <br />
-        <asp:TextBox ID="txtQty" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtQty"  TextMode="Number" runat="server"></asp:TextBox>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" 
+            ControlToValidate="txtQty" 
+            MinimumValue="1" MaximumValue="10"
+            Type="Integer"
+            ErrorMessage="Valid quantity is 1 to 10"></asp:RangeValidator>
         <p></p>
         <asp:CheckBox ID="chkDiscount" runat="server" />Discounted Product
         <p></p>

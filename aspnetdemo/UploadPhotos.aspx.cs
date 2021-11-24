@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +27,19 @@ namespace aspnetdemo
             }
             else
                 lblMsg.Text = "Please select a file to upload!";
+        }
+
+        protected void lbShowPhotos_Click(object sender, EventArgs e)
+        {
+            string folder = Request.MapPath("/photos");
+            DirectoryInfo dir = new DirectoryInfo(folder);
+            FileInfo[] files = dir.GetFiles();
+            string photos = "";
+            foreach (var file in files)
+            {
+                photos += $"<img src='/photos/{file.Name}' style='width:200px;height:200px'/><p></p>";
+            }
+            lblPhotos.Text = photos;
         }
     }
 }

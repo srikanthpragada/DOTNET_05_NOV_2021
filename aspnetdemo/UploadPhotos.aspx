@@ -13,8 +13,11 @@
          <p></p>
          <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" />
          <p></p>
-            
          <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+         <p></p>
+         <asp:LinkButton ID="lbShowPhotos" runat="server" OnClick="lbShowPhotos_Click">Show Photos</asp:LinkButton>
+         <p></p>
+         <asp:Label ID="lblPhotos" runat="server" Text=""></asp:Label>
     </form>
 </body>
 </html>
