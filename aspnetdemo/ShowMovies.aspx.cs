@@ -16,8 +16,6 @@ namespace aspnetdemo
                 Response.Redirect("TakeCity.aspx");
             else
                 lblMovies.Text = $"Movies in city - {city.Value}";
-
-
         }
     }
 }

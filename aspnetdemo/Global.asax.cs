@@ -11,6 +11,21 @@ namespace aspnetdemo
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            Application["count"] = 0;
+        }
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            int count = (int) Application["count"];
+            count ++;
+            Application["count"] = count;
+
+        }
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+            int count = (int)Application["count"];
+            count --;
+            Application["count"] = count;
         }
     }
 }
