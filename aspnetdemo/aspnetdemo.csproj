@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="First.aspx" />
     <Content Include="Global.asax" />
     <Content Include="hello.aspx" />
     <Content Include="PostBackDemo.aspx" />
     <Content Include="PriceCalculator.aspx" />
+    <Content Include="Second.aspx" />
     <Content Include="SessionDemo.aspx" />
     <Content Include="ShowMovies.aspx" />
     <Content Include="TakeCity.aspx" />
@@ -78,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="First.aspx.cs">
+      <DependentUpon>First.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="First.aspx.designer.cs">
+      <DependentUpon>First.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -103,6 +112,13 @@
       <DependentUpon>PriceCalculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Second.aspx.cs">
+      <DependentUpon>Second.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Second.aspx.designer.cs">
+      <DependentUpon>Second.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SessionDemo.aspx.cs">
       <DependentUpon>SessionDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

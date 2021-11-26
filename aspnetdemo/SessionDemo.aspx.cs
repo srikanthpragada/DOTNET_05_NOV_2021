@@ -12,6 +12,7 @@ namespace aspnetdemo
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.Write("Session Count = " + Application["count"]);
+            Trace.Write("Value of cookie city : " + Request.Cookies["city"]);
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
