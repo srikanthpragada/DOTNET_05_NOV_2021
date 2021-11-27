@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpDemo.Library1.ReadNames</StartupObject>
+    <StartupObject>CsharpDemo.Advanced.FindAllDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advanced\DelegateDemo.cs" />
+    <Compile Include="Advanced\FindAllDemo.cs" />
+    <Compile Include="Advanced\StackDemo.cs" />
     <Compile Include="Factors.cs" />
     <Compile Include="FunDemo.cs" />
     <Compile Include="HigherPrices.cs" />
