@@ -46,9 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advanced\AnonymousDemo.cs" />
     <Compile Include="Advanced\DelegateDemo.cs" />
+    <Compile Include="Advanced\ExtensionMethods.cs" />
     <Compile Include="Advanced\FindAllDemo.cs" />
     <Compile Include="Advanced\StackDemo.cs" />
+    <Compile Include="Advanced\VarDynamicDemo.cs" />
     <Compile Include="Factors.cs" />
     <Compile Include="FunDemo.cs" />
     <Compile Include="HigherPrices.cs" />
