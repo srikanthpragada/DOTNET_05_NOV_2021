@@ -42,13 +42,22 @@ namespace adonetdemo
         protected global::System.Web.UI.WebControls.TextBox txtQoh;
 
         /// <summary>
-        /// txtCategoryCode control.
+        /// ddlCatCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoryCode;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCatCode;
+
+        /// <summary>
+        /// sdcCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdcCategories;
 
         /// <summary>
         /// txtRemarks control.

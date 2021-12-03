@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Products.master.cs" Inherits="adonetdemo.Products" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Products.master.cs" Inherits="adonetdemo.Products"  %>
 
 <!DOCTYPE html>
 
@@ -7,11 +7,13 @@
     <title>Products Catalog</title>
 </head>
 <body>
-    <h1>Products Catalog</h1>
-    <div>
+    <div class="banner">Products Catalog</div>
+    <div class="menu">
         [<a href="AddProduct.aspx">Add Product</a>]
         &nbsp;
         [<a href="ListProducts.aspx">List Products</a>]
+        &nbsp;
+        [<a href="EditProducts.aspx">Edit Products</a>]
     </div>
     <form id="form1" runat="server">
         <div>

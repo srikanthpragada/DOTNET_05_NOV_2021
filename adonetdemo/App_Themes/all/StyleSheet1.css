@@ -1,0 +1,19 @@
+﻿body {
+     font-family: Calibri;
+     font-size:12pt;
+}
+
+.banner {
+    font-size:30pt;
+    background-color:blue;
+    color:white;
+    letter-spacing : 5pt;
+    font-weight :bold;
+}
+.menu {
+    background-color: silver;
+    font-weight: bold;
+}
+h2 {
+    color:red;
+}

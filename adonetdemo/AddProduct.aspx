@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Product" Language="C#" MasterPageFile="~/Products.Master" AutoEventWireup="true" CodeBehind="AddProduct.aspx.cs" Inherits="adonetdemo.AddProduct" %>
+﻿<%@ Page Title="Add Product" Language="C#" MasterPageFile="~/Products.Master"  AutoEventWireup="true" CodeBehind="AddProduct.aspx.cs" Inherits="adonetdemo.AddProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>Add Product</h2>
     Product Name <br />
@@ -11,7 +11,8 @@
     <asp:TextBox id="txtQoh" runat="server" TextMode="Number" Required="true"></asp:TextBox>
     <p></p>
      Category Code<br />
-    <asp:TextBox id="txtCategoryCode" runat="server" Required="true"></asp:TextBox>
+    <asp:DropDownList ID="ddlCatCode" runat="server" DataSourceID="sdcCategories" DataTextField="catdesc" DataValueField="catcode"></asp:DropDownList>
+    <asp:SqlDataSource ID="sdcCategories" runat="server" ConnectionString="<%$ ConnectionStrings:msdbConnectionString %>" SelectCommand="SELECT * FROM [categories]"></asp:SqlDataSource>
     <p></p>
     Remarks<br />
     <asp:TextBox id="txtRemarks" runat="server"></asp:TextBox>

@@ -26,7 +26,7 @@ namespace adonetdemo
             cmd.Parameters.AddWithValue("@price", txtPrice.Text);
             cmd.Parameters.AddWithValue("@qoh", txtQoh.Text);
             cmd.Parameters.AddWithValue("@remarks", txtRemarks.Text);
-            cmd.Parameters.AddWithValue("@catcode", txtCategoryCode.Text);
+            cmd.Parameters.AddWithValue("@catcode", ddlCatCode.SelectedValue);
             try
             {
                 cmd.ExecuteNonQuery();  // DML 
