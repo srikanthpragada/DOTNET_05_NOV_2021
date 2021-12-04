@@ -14,6 +14,11 @@
         [<a href="ListProducts.aspx">List Products</a>]
         &nbsp;
         [<a href="EditProducts.aspx">Edit Products</a>]
+
+        &nbsp;
+        [<a href="SearchProducts.aspx">Search Products</a>]
+        &nbsp;
+        [<a href="ProductsByCategory.aspx">Products by Category</a>]
     </div>
     <form id="form1" runat="server">
         <div>

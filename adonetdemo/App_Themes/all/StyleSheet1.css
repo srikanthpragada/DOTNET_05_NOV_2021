@@ -1,6 +1,7 @@
 ﻿body {
      font-family: Calibri;
      font-size:12pt;
+    font-weight: 700;
 }
 
 .banner {
@@ -16,4 +17,8 @@
 }
 h2 {
     color:red;
+}
+
+.item {
+    background-color: #b6ff00;
 }
