@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpDemo.Advanced.FindAllDemo</StartupObject>
+    <StartupObject>CsharpDemo.Linq.QueryExpressionsDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,9 @@
     <Compile Include="Library1\TotalMarks.cs" />
     <Compile Include="Library1\ReadNames.cs" />
     <Compile Include="Library1\WriteNames.cs" />
+    <Compile Include="Linq\Book.cs" />
+    <Compile Include="Linq\QueryExpressionsDemo.cs" />
+    <Compile Include="Linq\QueryOperatorsDemo.cs" />
     <Compile Include="Oop\InhDemo.cs" />
     <Compile Include="Oop\TestAccount.cs" />
     <Compile Include="Oop\TestPerson.cs" />
