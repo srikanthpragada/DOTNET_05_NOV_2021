@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpDemo.EF.ListCategories</StartupObject>
+    <StartupObject>CsharpDemo.EF.CacheCategory</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -62,8 +62,12 @@
     <Compile Include="Advanced\FindAllDemo.cs" />
     <Compile Include="Advanced\StackDemo.cs" />
     <Compile Include="Advanced\VarDynamicDemo.cs" />
+    <Compile Include="EF\CacheDemo.cs" />
+    <Compile Include="EF\DeleteCategory.cs" />
+    <Compile Include="EF\UpdateCategory.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\InventoryContext.cs" />
+    <Compile Include="EF\AddCategory.cs" />
     <Compile Include="EF\ListCategories.cs" />
     <Compile Include="Factors.cs" />
     <Compile Include="FunDemo.cs" />
