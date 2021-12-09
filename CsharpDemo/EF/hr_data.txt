@@ -1,0 +1,17 @@
+﻿Command in PM for migration
+===========================
+1. enable-migrations -ContextTypeName HRContext
+2. add-migration DeptEmpTables
+3. update-database
+
+
+
+insert into departments values('IT')
+insert into departments values('Finance')
+insert into departments values('Sales')
+
+
+insert into employees values('Mark',500000,1)
+insert into employees values('Jason',800000,1)
+insert into employees values('Scott',450000,2)
+insert into employees values('Paul',550000,3)
