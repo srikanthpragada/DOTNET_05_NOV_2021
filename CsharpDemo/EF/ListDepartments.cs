@@ -12,7 +12,7 @@ namespace CsharpDemo.EF
         {
             var ctx = new HRContext();
             // EF Log to console 
-            // ctx.Database.Log = Console.WriteLine;
+            ctx.Database.Log = Console.WriteLine;
 
             // List all Departments with Employees 
             foreach (var dept in ctx.Departments)
