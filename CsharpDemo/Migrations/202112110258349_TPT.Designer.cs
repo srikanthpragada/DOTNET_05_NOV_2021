@@ -7,13 +7,13 @@ namespace CsharpDemo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class DeptEmpTables : IMigrationMetadata
+    public sealed partial class TPT : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DeptEmpTables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(TPT));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112090251193_DeptEmpTables"; }
+            get { return "202112110258349_TPT"; }
         }
         
         string IMigrationMetadata.Source

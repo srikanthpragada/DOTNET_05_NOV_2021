@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpDemo.EF.ListDeptEmpCount</StartupObject>
+    <StartupObject>CsharpDemo.EF.ListCourses</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -62,17 +62,21 @@
     <Compile Include="Advanced\FindAllDemo.cs" />
     <Compile Include="Advanced\StackDemo.cs" />
     <Compile Include="Advanced\VarDynamicDemo.cs" />
+    <Compile Include="EF\AddCourses.cs" />
     <Compile Include="EF\AddEmployee.cs" />
     <Compile Include="EF\CacheDemo.cs" />
     <Compile Include="EF\DeleteCategory.cs" />
     <Compile Include="EF\Department.cs" />
     <Compile Include="EF\Employee.cs" />
     <Compile Include="EF\HRContext.cs" />
+    <Compile Include="EF\InhDemo.cs" />
+    <Compile Include="EF\ListCourses.cs" />
     <Compile Include="EF\ListDeptEmpCount.cs" />
     <Compile Include="EF\ListDepartments.cs" />
     <Compile Include="EF\ListEmployeesEagerLoad.cs" />
     <Compile Include="EF\ProxyDemo.cs" />
     <Compile Include="EF\ListEmployeesLazyLoad.cs" />
+    <Compile Include="EF\TrainingContext.cs" />
     <Compile Include="EF\UpdateCategory.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\InventoryContext.cs" />
@@ -90,9 +94,9 @@
     <Compile Include="Linq\Book.cs" />
     <Compile Include="Linq\QueryExpressionsDemo.cs" />
     <Compile Include="Linq\QueryOperatorsDemo.cs" />
-    <Compile Include="Migrations\202112090251193_DeptEmpTables.cs" />
-    <Compile Include="Migrations\202112090251193_DeptEmpTables.designer.cs">
-      <DependentUpon>202112090251193_DeptEmpTables.cs</DependentUpon>
+    <Compile Include="Migrations\202112110258349_TPT.cs" />
+    <Compile Include="Migrations\202112110258349_TPT.designer.cs">
+      <DependentUpon>202112110258349_TPT.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Oop\InhDemo.cs" />
@@ -110,8 +114,8 @@
     <Content Include="EF\hr_data.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202112090251193_DeptEmpTables.resx">
-      <DependentUpon>202112090251193_DeptEmpTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112110258349_TPT.resx">
+      <DependentUpon>202112110258349_TPT.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

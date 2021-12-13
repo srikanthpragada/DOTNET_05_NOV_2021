@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CsharpDemo.EF.HRContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CsharpDemo.EF.TrainingContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CsharpDemo.EF.HRContext context)
+        protected override void Seed(CsharpDemo.EF.TrainingContext context)
         {
             //  This method will be called after migrating to the latest version.
 
