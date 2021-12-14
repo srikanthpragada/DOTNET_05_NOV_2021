@@ -24,5 +24,24 @@ namespace aspnetmvcdemo.Controllers
            
             return View(model);
         }
+
+        [HttpGet]
+        public ActionResult Fee()
+        {
+            ViewBag.Course = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Fee(string course)
+        {
+            if (course == "Java")
+                ViewBag.Fee = 10000;
+            else
+                ViewBag.Fee = 15000;
+
+            ViewBag.Course = course; 
+            return View();
+        }
     }
 }

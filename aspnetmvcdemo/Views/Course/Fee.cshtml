@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fee Calculation</title>
+</head>
+<body>
+    <h2>Fee Calculation</h2>
+    <form method="post">
+        Course : <input type="text" name="course"  value="@ViewBag.Course"/>
+        <p></p>
+        <input type="submit" value="Submit" />
+    </form>
+
+    @if (ViewBag.Fee != null)
+    {
+        <h3>Course Fee : @ViewBag.Fee</h3>
+    }
+</body>
+</html>
