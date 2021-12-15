@@ -19,7 +19,11 @@ namespace aspnetmvcdemo.Controllers
         [HttpPost]
         public ActionResult Index(Interest model)
         {
-            model.Result = model.Amount * model.Rate / 100; 
+            if (ModelState.IsValid)
+            {
+                model.Result = model.Amount * model.Rate / 100;
+            }
+
             return View(model);
         }
     }
