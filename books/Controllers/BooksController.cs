@@ -20,20 +20,7 @@ namespace books.Controllers
             return View(db.Books.ToList());
         }
 
-        // GET: Books/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Book book = db.Books.Find(id);
-            if (book == null)
-            {
-                return HttpNotFound();
-            }
-            return View(book);
-        }
+       
 
         // GET: Books/Create
         public ActionResult Create()
@@ -65,6 +52,7 @@ namespace books.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Book book = db.Books.Find(id);
             if (book == null)
             {
@@ -96,24 +84,19 @@ namespace books.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Book book = db.Books.Find(id);
             if (book == null)
             {
                 return HttpNotFound();
             }
-            return View(book);
-        }
 
-        // POST: Books/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Book book = db.Books.Find(id);
             db.Books.Remove(book);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+       
 
         protected override void Dispose(bool disposing)
         {

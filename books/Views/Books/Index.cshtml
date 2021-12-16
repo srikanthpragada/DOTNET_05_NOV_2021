@@ -1,26 +1,23 @@
 ﻿@model IEnumerable<books.Models.Book>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Books";
 }
 
-<h2>Index</h2>
+<h2>List of Books</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
-    <tr>
-        <th>
+    <tr style="background-color:lightgray">
+        <th class="header">
             @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
+        </th >
+        <th class="header">
             @Html.DisplayNameFor(model => model.Author)
         </th>
-        <th>
+        <th class="header">
             @Html.DisplayNameFor(model => model.NoPages)
         </th>
-        <th>
+        <th class="header">
             @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th></th>
@@ -28,22 +25,22 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="text-align:center">
             @Html.DisplayFor(modelItem => item.Title)
         </td>
-        <td>
+        <td style="text-align:center">
             @Html.DisplayFor(modelItem => item.Author)
         </td>
-        <td>
+        <td style="text-align:center">
             @Html.DisplayFor(modelItem => item.NoPages)
         </td>
-        <td>
+        <td style="text-align:center">
             @Html.DisplayFor(modelItem => item.Rating)
         </td>
-        <td>
+        <td style="text-align:center">
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id } , 
+                    new { onclick = "return confirm('Are you sure?')"})
         </td>
     </tr>
 }

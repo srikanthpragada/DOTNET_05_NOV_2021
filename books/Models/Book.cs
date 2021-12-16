@@ -15,15 +15,19 @@ namespace books.Models
         public int Id { get; set; }
 
         [Column("Title")]
+        [Required]
         public string Title { get; set; }
 
         [Column("Author")]
+        [Required]
         public string Author { get; set; }
 
         [Column("NoPages")]
+        [Range(1, 2000, ErrorMessage = "Invalid number for No. of pages")]
         public int NoPages { get; set; }
 
         [Column("Rating")]
+        [Range(1,5,ErrorMessage ="Valid rating is 1 to 5")]
         public int Rating { get; set; }
 
     }
