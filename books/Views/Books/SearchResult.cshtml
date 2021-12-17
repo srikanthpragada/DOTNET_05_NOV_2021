@@ -1,0 +1,48 @@
+﻿@model IEnumerable<books.Models.Book>
+
+@{
+    ViewBag.Title = "Books";
+}
+
+<table class="table">
+    <tr style="background-color:lightgray">
+        <th class="header">
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th class="header">
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th class="header">
+            @Html.DisplayNameFor(model => model.NoPages)
+        </th>
+        <th class="header">
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.NoPages)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td style="text-align:center">
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id },
+                        new { onclick = "return confirm('Are you sure?')" })
+            </td>
+        </tr>
+    }
+
+</table>
+

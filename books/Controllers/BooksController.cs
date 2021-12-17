@@ -13,6 +13,7 @@ namespace books.Controllers
     public class BooksController : Controller
     {
         private CatalogContext db = new CatalogContext();
+        
 
         // GET: Books
         public ActionResult Index()
@@ -20,11 +21,22 @@ namespace books.Controllers
             return View(db.Books.ToList());
         }
 
-       
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        public ActionResult SearchResult(string title)
+        {
+            var books = db.Books.Where(b => b.Title.Contains(title));
+            return PartialView(books);
+        }
+
 
         // GET: Books/Create
         public ActionResult Create()
         {
+        
             return View();
         }
 
