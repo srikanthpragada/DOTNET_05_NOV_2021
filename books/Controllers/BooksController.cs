@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using books.Models;
@@ -16,6 +17,7 @@ namespace books.Controllers
         
 
         // GET: Books
+        [OutputCache(Duration =120)]
         public ActionResult Index()
         {
             return View(db.Books.ToList());
@@ -28,6 +30,7 @@ namespace books.Controllers
 
         public ActionResult SearchResult(string title)
         {
+            Thread.Sleep(5000);
             var books = db.Books.Where(b => b.Title.Contains(title));
             return PartialView(books);
         }

@@ -3,21 +3,24 @@
     ViewBag.Title = "Search";
 }
 
+<h2>Search</h2>
 
-
-<h2>Search</h2> 
-
-@using (Ajax.BeginForm("SearchResult", new AjaxOptions { UpdateTargetId = "books" }))
+@using (Ajax.BeginForm("SearchResult", new AjaxOptions
+{
+    UpdateTargetId = "books",
+    LoadingElementId = "progress"
+}))
 {
     <span>Title :</span>
     <input type="text" name="title" />
     <input type="submit" value="Search" />
+    <span id="progress" style="display:none">Searching...</span>
     <p></p>
     <div id="books"></div>
 }
 
 @section scripts {
 
-<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 
 } 
