@@ -1,0 +1,12 @@
+﻿@page
+@model AspNetCoreDemo.Pages.SaveCityModel
+@{
+}
+
+<h1>Save City</h1>
+<form  method="post">
+    City <input  asp-for="City" />
+    <span asp-validation-for="City"></span>
+    <p></p>
+    <input type="submit" value="Save City" />
+</form>

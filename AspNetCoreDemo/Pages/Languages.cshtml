@@ -1,0 +1,23 @@
+﻿@page
+@model AspNetCoreDemo.Pages.LanguagesModel
+@{
+}
+
+<h1>Languages</h1>
+
+<form>
+    Language <input type="text" name="lang" />
+    <input type="submit" value="Add" />
+</form>
+<p></p>
+@if (Model.Languages != null)
+{
+    <h4>Known Languages</h4>
+
+    <ul>
+        @foreach (var lang in Model.Languages.Split(','))
+        {
+            <li>@lang</li>
+        }
+    </ul>
+}

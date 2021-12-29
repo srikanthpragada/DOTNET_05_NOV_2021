@@ -1,0 +1,30 @@
+﻿@page
+@model AspNetCoreDemo.Pages.InterestModel
+@{
+    Layout = null;
+    ViewBag.Title = "Interest Calculation";
+}
+
+<h2>Interest Calculation</h2>
+<form method="post">
+    Deposit Amount <br />
+    <input asp-for="Amount" />
+    <span asp-validation-for="Amount" style="color:red"></span>
+    <p></p>
+    Interest Rate % <br />
+    <input asp-for="Rate" />
+    <span asp-validation-for="Rate" style="color:red"></span>
+    <p></p>
+    <input type="submit" value="Calculate" />
+</form>
+
+
+@if (Model.Interest > 0)
+{
+    <h3>Interest : @Model.Interest</h3>
+}
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

@@ -1,0 +1,13 @@
+﻿@page
+@model AspNetCoreDemo.Pages.ListBooksModel
+@{
+}
+<h1>Books</h1>
+
+@foreach (var book in Model.Books)
+{
+    <div>@book.Title</div>
+    <div>@book.Author</div>
+    <div>@book.Price</div>
+    <p></p>
+}

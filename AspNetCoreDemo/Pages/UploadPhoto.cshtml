@@ -1,0 +1,13 @@
+﻿@page
+@model AspNetCoreDemo.Pages.UploadPhotoModel
+@{
+    Layout = null;
+}
+
+
+<h1>Upload Photo</h1>
+<form enctype="multipart/form-data" method="post">
+    Photo : <input type="file"  asp-for="Photo" />
+    <p></p>
+    <input type="submit" value="Upload" />
+</form>

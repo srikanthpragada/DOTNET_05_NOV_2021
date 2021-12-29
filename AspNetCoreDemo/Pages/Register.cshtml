@@ -1,0 +1,39 @@
+﻿@page
+@model AspNetCoreDemo.Pages.RegisterModel
+@{
+    ViewBag.Title = "Registration";
+    // Layout = null;
+}
+
+<style>
+    .field-validation-error {
+        color:red;
+        font-weight:bold;
+    }
+</style>
+
+<h2>Registration</h2>
+<form method="post">
+    Email Address <br />
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+    <p></p>
+    Password <br />
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+    <p></p>
+    Confirm Password <br />
+    <input asp-for="ConfirmPassword" />
+    <span asp-validation-for="ConfirmPassword"></span>
+    <p></p>
+    Occupation <br/>
+    <select asp-for="Occupation" asp-items="Model.Occupations"></select>
+    <p></p>
+    <input type="submit" value="Register" />    
+</form>
+
+<h4>@Model.Message</h4>
+
+@section Scripts {
+     <partial  name="_ValidationScriptsPartial"/>
+}
