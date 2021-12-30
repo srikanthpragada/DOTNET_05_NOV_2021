@@ -1,0 +1,10 @@
+﻿create table books
+( id integer identity,
+  title varchar(50) not null,
+  author varchar(50) not null,
+  price integer 
+)
+
+
+insert into books values('You can win','Shiva Khera',300)
+insert into books values('Long walk to freedom','Nelson Mandela',450)

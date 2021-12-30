@@ -1,16 +1,19 @@
 [
   {
+    "Id" :  1,
     "Title": "The premonition",
     "Author": "Micheal Lewis",
     "Price": 500
   },
   {
+    "Id": 2,
     "Title": "The promised land",
     "Author": "Barack Obama",
     "Price": 450
   },
 
   {
+    "Id": 3,
     "Title": "No Filter",
     "Author": "Sarah Frier",
     "Price": 650

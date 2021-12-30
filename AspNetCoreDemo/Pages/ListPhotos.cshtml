@@ -2,10 +2,11 @@
 @model AspNetCoreDemo.Pages.ListPhotosModel
 @{
     Layout = null;
-}
+} 
 
 @foreach (var file in Model.Files)
 {
-    <img src="~/photos/@(file.Name)" style="width:200px;height:200px" />
+    <img src="~/photos/@(file.Name)"
+         style="width:100px;height:100px" />
     <p></p>
 }
