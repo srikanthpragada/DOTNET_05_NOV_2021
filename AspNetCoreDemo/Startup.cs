@@ -1,6 +1,8 @@
 using AspNetCoreDemo.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,7 @@ namespace AspNetCoreDemo
         {
             services.AddRazorPages();
             services.AddDbContext<CatalogContext>();
+            // services.AddTransient<IBooks, JSONBooksService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +45,7 @@ namespace AspNetCoreDemo
             app.UseStaticFiles();
 
             app.UseRouting();
+
 
             app.UseAuthorization();
 

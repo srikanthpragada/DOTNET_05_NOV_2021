@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCoreDemo.Model
+namespace Courses.Models
 {
-    public class Book
+    public class Course
     {
-        [Key]
         public int Id { get; set; }
 
-        [Required]
+        [MaxLength(30)]
         public string Title { get; set; }
 
-        [Required]
-        public string Author { get; set; }
+        public int Duration { get; set; }
 
-        [Range(10, 10000)]
-        public int Price { get; set; }
+        public int Fee { get; set; }
+
+        [MaxLength(200)]
+        public string Description { get; set; }
     }
 }

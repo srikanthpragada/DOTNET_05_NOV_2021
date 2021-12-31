@@ -11,9 +11,9 @@ namespace AspNetCoreDemo.Pages.Books
 {
     public class ListModel : PageModel
     {
-        private readonly AspNetCoreDemo.Model.CatalogContext _context;
+        private readonly CatalogContext _context;
 
-        public ListModel(AspNetCoreDemo.Model.CatalogContext context)
+        public ListModel(CatalogContext context)
         {
             _context = context;
         }
