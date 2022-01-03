@@ -27,7 +27,8 @@ namespace AspNetCoreDemo
         {
             services.AddRazorPages();
             services.AddDbContext<CatalogContext>();
-            // services.AddTransient<IBooks, JSONBooksService>();
+            //services.AddTransient<IBooks, JSONBooksService>();
+            services.AddTransient<IBooks, DatabaseBooks>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,7 +12,7 @@ namespace AspNetCoreDemo.Pages
     {
         public List<Book> Books { get; set; }
 
-        public ListBooksModel(IBooks books)
+        public ListBooksModel(IBooks books)  // DI
         {
             Books = books.GetBooks();
         }
