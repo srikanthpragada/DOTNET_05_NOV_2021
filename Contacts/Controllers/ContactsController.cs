@@ -45,18 +45,12 @@ namespace Contacts.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(String Fullname, String Email, String Mobile)
+        public async Task<IActionResult> Create(Contact contact)
         {
             // Get userid of currently logged in user 
-            var userId = _userManager.GetUserId(HttpContext.User);
 
-            var contact = new Contact
-            {
-                Fullname = Fullname,
-                Email = Email,
-                Mobile = Mobile,
-                UserId = userId
-            };
+            var userId = _userManager.GetUserId(User);
+            contact.UserId = userId;
 
             if (ModelState.IsValid)
             {
@@ -88,17 +82,17 @@ namespace Contacts.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Fullname,Email,Mobile,UserId")] Contact contact)
+        public async Task<IActionResult> Edit(int id, Contact contact)
         {
-            if (id != contact.Id)
-            {
-                return NotFound();
-            }
-
+           
             if (ModelState.IsValid)
             {
                 try
                 {
+                    contact.Id = id;
+                    var userId = _userManager.GetUserId(User);
+                    contact.UserId = userId;
+
                     _context.Update(contact);
                     await _context.SaveChangesAsync();
                 }
