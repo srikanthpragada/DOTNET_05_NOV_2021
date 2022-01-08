@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script>
+        var URL = "http://localhost:5292/api/books"
+
+        function getAllBooks() {
+            $.get(URL,
+                null,  
+                function (books) {
+                    console.log(books)
+                    output = "";
+                    books.forEach(function (c) {
+                        output += "<li>" + c.title + " - "  + c.author + "</li>";
+                    });
+                    $("#books").html(output);
+                }
+            );
+        }
+
+        function deleteBook() {
+            var url = URL + "/" + $("#Id").val();
+            $.ajax({
+                "url": url,
+                "type": "delete",
+                "success": function () {
+                    alert("Deleted Successfully!")
+                },
+                "error": function () {
+                    alert("Deletion Failed!")
+                }
+            });
+        }
+
+        function addBook() {
+            // Create JavaScript object 
+            var data = {
+                Title: $("#title").val(),
+                Author: $("#author").val(),
+                Price: $("#price").val()
+            };
+
+            $.ajax(
+                {
+                    "url": URL,
+                    "data": JSON.stringify(data),  // JS object to JSON
+                    "type": "post",
+                    "contentType": "application/json",
+                    "success": function (book) {
+                        console.log(book)
+                        alert("Added Book successfully!")
+                    },
+                    "error": function () {
+                        alert("Sorry! Could not add Book due to error!")
+                    }
+                }
+            );
+        }
+    </script>
+</head>
+<body>
+    <h1>Books Client</h1>
+    <button onclick="getAllBooks()">Get All Books</button>
+
+    <ul id="books">
+    </ul>
+
+    <hr />
+
+    <h2>Add Book</h2>
+    Title : <input type="text" id="title" />
+    Author : <input type="text" id="author" />
+    Price : <input type="number" id="price" />
+    <p></p>
+    <button onclick="addBook()">Add Book</button>
+
+    <hr />
+
+    <h2>Delete Book</h2>
+    Id : <input type="text" id="Id" />
+    <p></p>
+    <button onclick="deleteBook()">Delete Book</button>
+
+</body>
+</html>
